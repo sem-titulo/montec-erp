@@ -1,0 +1,15 @@
+[submodule "addons/thirdparty-addons"]
+	path = addons/thirdparty-addons
+	url = https://github.com/Trust-Code/odoo-brasil.git
+[submodule "addons/thirdparty-addons/odoo-brasil"]
+	path = addons/thirdparty-addons/odoo-brasil
+	url = https://github.com/Trust-Code/odoo-brasil.git
+[submodule "addons/thirdparty-addons/muk"]
+	path = addons/thirdparty-addons/muk
+	url = https://github.com/muk-it/muk_web.git
+[submodule "docker"]
+	path = docker
+	url = https://github.com/odoo/docker.git
+[submodule "addons/thirdparty-addons/trustcode-addons"]
+	path = addons/thirdparty-addons/trustcode-addons
+	url = https://github.com/Trust-Code/trustcode-addons.git

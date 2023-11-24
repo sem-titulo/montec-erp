@@ -3,7 +3,6 @@ services:
     odoo:
         build: .
         container_name: odoo
-        image: odoo:16
         restart: always
         volumes:
             - ./addons:/mnt/extra-addons

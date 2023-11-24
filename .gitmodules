@@ -13,3 +13,6 @@
 [submodule "addons/thirdparty-addons/trustcode-addons"]
 	path = addons/thirdparty-addons/trustcode-addons
 	url = https://github.com/Trust-Code/trustcode-addons.git
+[submodule "addons/montec-addons"]
+	path = addons/montec-addons
+	url = https://github.com/sem-titulo/montec-addons.git

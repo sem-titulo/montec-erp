@@ -7,6 +7,4 @@
 [submodule "addons/thirdparty-addons"]
 	path = addons/thirdparty-addons
 	url = https://github.com/sem-titulo/thirdparty-addons.git
-[submodule "thirdparty-addons"]
-	path = thirdparty-addons
-	url = https://github.com/sem-titulo/thirdparty-addons.git
+	branch = 15.0

@@ -14,17 +14,35 @@ services:
         command:  bash -c "/usr/bin/python3 -m debugpy --listen 0.0.0.0:8888 /usr/bin/odoo --db_user=odoo --db_host=db --db_password=odoo"
         depends_on:
             - "db"
-            - "nginx"
+        networks:
+          - odoo_network
 
     nginx:
         container_name: nginx
         image: nginx:latest
-        restart: always
+        restart: unless-stopped
         ports:
             - 80:80
             - 443:443
         volumes:
-            - ./config/nginx/conf:/etc/nginx/conf.d
+            - ./config/nginx/conf:/etc/nginx/conf.d/:rw
+            - ./certbot/conf:/etc/letsencrypt
+            - ./certbot/www:/var/www/certbot
+        depends_on:
+            - "odoo"
+        networks:
+            - odoo_network
+
+    certbot:
+        image: certbot/certbot
+        volumes:
+            - ./certbot/conf:/etc/letsencrypt
+            - ./certbot/www:/var/www/certbot
+        command: certonly --webroot -w /var/www/certbot --force-renewal --email danielpontesnery@gmail.com -d erpmontec.empresarial.ws --agree-tos
+        depends_on:
+            - nginx
+        networks:
+          - odoo_network
 
     db:
       image: postgres:13

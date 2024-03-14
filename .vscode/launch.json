@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Jmenegassi: Attach",
+            "name": "Odoo: Attach",
             "type": "python",
             "request": "attach",
             "port": 8869,
@@ -13,8 +13,8 @@
             "host": "localhost",
             "pathMappings": [
                 {
-                    "localRoot": "${workspaceFolder}/addons/montec-addons",
-                    "remoteRoot": "/mnt/extra-addons/montec-addons",
+                    "localRoot": "${workspaceFolder}/addons/",
+                    "remoteRoot": "/mnt/extra-addons/",
                 }
             ],
             "logToFile": true
